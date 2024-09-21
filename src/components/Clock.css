@@ -1,0 +1,80 @@
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e3e3e3;
+    height: 300px;
+    justify-content: center;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.digit {
+    width: 60px;
+    height: 132px;
+    margin: 0 10px;
+    display: grid;
+    grid-template-areas:
+        ". a ."
+        "f . b"
+        ". g ."
+        "e . c"
+        ". d .";
+    grid-template-columns: 10px 45px 10px;
+    grid-template-rows: 10px 50px 10px 50px 10px;
+}
+
+.segment {
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &.area-a {
+        grid-area: a;
+    }
+
+    &.area-b {
+        grid-area: b;
+    }
+
+    &.area-c {
+        grid-area: c;
+    }
+
+    &.area-d {
+        grid-area: d;
+    }
+
+    &.area-e {
+        grid-area: e;
+    }
+
+    &.area-f {
+        grid-area: f;
+    }
+
+    &.area-g {
+        grid-area: g;
+    }
+}
+
+.on {
+    background-color: #17202a;
+}
+
+.colon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0 20px;
+
+    .colon-dot {
+        width: 25px;
+        height: 25px;
+        background-color: #ba4a00;
+        border-radius: 50%;
+    }
+}
